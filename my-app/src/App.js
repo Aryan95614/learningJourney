@@ -2,7 +2,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import AskCouncil from './AskCouncil';
+import {Text} from '@chakra-ui/react';
 
 export default function App() {
   const backend_key = process.env.FLASK_CONNECTION_KEY;
@@ -21,13 +22,11 @@ export default function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/">
-            Council of Knowledge
-          </Route>
-        </Switch>
-      </BrowserRouter>
+      <nav>
+        <a href="/"> 
+          <Text px={4} py={4}>Council of Knowledge</Text>
+        </a>
+      </nav>
 
     </>
   );
