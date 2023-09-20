@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import AskCouncil from './AskCouncil';
-import {Text} from '@chakra-ui/react';
+import {Text, HStack} from '@chakra-ui/react';
 
 export default function App() {
   const backend_key = process.env.FLASK_CONNECTION_KEY;
@@ -23,9 +23,15 @@ export default function App() {
   return (
     <>
       <nav>
-        <a href="/"> 
-          <Text px={4} py={4}>Council of Knowledge</Text>
-        </a>
+        <HStack>
+          <a href="/"> 
+            <Text px={4} py={4}>Council of Knowledge</Text>
+          </a>
+          <a href="/ask-council"> 
+            <Text px={4} py={4}>Ask the Experts</Text>
+          </a>
+        </HStack>
+        
       </nav>
 
     </>
