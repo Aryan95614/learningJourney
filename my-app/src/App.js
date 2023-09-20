@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import NavigationBar from './navigationbar';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 export default function App() {
   const backend_key = process.env.FLASK_CONNECTION_KEY;
@@ -21,7 +21,13 @@ export default function App() {
 
   return (
     <>
-      <NavigationBar />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/">
+            Council of Knowledge
+          </Route>
+        </Switch>
+      </BrowserRouter>
 
     </>
   );
