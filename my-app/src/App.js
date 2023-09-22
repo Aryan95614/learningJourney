@@ -2,7 +2,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import AskCouncil from './AskCouncil';
+import NavigationBar from './components/navigation';
+
 import {Text, HStack} from '@chakra-ui/react';
 
 export default function App() {
@@ -22,17 +23,8 @@ export default function App() {
 
   return (
     <>
-      <nav>
-        <HStack>
-          <a href="/"> 
-            <Text px={4} py={4}>Council of Knowledge</Text>
-          </a>
-          <a href="/ask-council"> 
-            <Text px={4} py={4}>Ask the Experts</Text>
-          </a>
-        </HStack>
-        
-      </nav>
+      <NavigationBar />
+      
 
     </>
   );
