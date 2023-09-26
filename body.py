@@ -1,3 +1,4 @@
+import sys, os
 
 
 class Database:
@@ -8,21 +9,21 @@ class Database:
         """
         pass
 
-    def add_information(self):
+    async def add_information(self):
         """
         Add a row to the database
         :return:
         """
         pass
 
-    def delete_information(self):
+    async def delete_information(self):
         """
         Take away a row from the database
         :return:
         """
         pass
 
-    def update_information(self):
+    async def update_information(self):
         """
         Change a specific type of information in a row
         :return:
